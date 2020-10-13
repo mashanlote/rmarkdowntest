@@ -4,12 +4,39 @@ author: "Tim"
 date: "13 10 2020"
 output: github_document
 ---
+# Header big
+```{r, echo = F}
+library(ggplot2)
+```
 
+## Header small
 ```{r}
 a <- rnorm(1e4, 500, 100)
 
 ```
-```{r}
+
+Create a vector.
+```{r, echo = F}
 plot(density(a))
 ```
+
+Plot said vector.
+```{r}
+b <- rnorm(1e4, 500, 200)
+```
+
+Create another vector.
+```{r, echo = F}
+plot(density(b))
+```
+
+Plot that vector.
+```{r, echo = F}
+c <- data.frame(cbind(one = a, two = b))
+ggplot(data = c, aes(a, b)) +
+  geom_point()
+```
+
+Combine vectors, plot b as a function of a.
+
 
