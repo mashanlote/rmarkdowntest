@@ -5,13 +5,11 @@ date: "13 10 2020"
 output: github_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r}
+a <- rnorm(1e4, 500, 100)
+
 ```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
-
-```{r, echo = F}
-print("Hello, world!")
+```{r}
+plot(density(a))
 ```
 

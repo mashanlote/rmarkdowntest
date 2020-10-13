@@ -3,7 +3,12 @@ first steps
 Tim
 13 10 2020
 
-Note that the `echo = FALSE` parameter was added to the code chunk to
-prevent printing of the R code that generated the plot.
+``` r
+a <- rnorm(1e4, 500, 100)
+```
 
-    ## [1] "Hello, world!"
+``` r
+plot(density(a))
+```
+
+![](0_first_steps_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
